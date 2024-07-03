@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-black grid place-items-center font-mono text-white tracking-wider px-4;
+  }
+}
