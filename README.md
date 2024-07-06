@@ -7,12 +7,6 @@
 
 **TypeSpeed** is a versatile typing speed test application designed to enhance and measure typing proficiency. It caters to users ranging from beginners looking to improve their typing skills to professionals aiming to boost their WPM (Words Per Minute). With its intuitive design, customizable settings, and support for multiple languages, **TypeSpeed** offers a dynamic platform for practicing and improving typing skills.
 
-## Features
-
-- **Customizable Settings**: Tailor your typing experience by adjusting settings such as typing speed, WPM targets, and more.
-- **Multi-Language Support**: Expand your typing skills across various languages to become a more versatile typist.
-- **Progress Tracking**: Monitor your improvement over time with detailed performance metrics.
-- **Engaging Experience**: Enhance your practice sessions with gamification elements like leaderboards and achievements.
 
 ## Getting Started
 
@@ -44,4 +38,4 @@ The application will now be accessible at `http://localhost:3000`.
 
 ## Usage
 
-Navigate to `http://localhost:3000` in your web browser to access **TypeSpeed**. From there, you can select your preferred language, choose your settings, and start practicing.
+Navigate to `http://localhost:3000` in your web browser to access **TypeSpeed**. From there, you can start practicing.
