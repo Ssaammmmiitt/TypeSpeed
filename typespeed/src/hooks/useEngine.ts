@@ -6,8 +6,8 @@ import useTypings from "./useTypings";
 
 export type State = "start" | "run" | "finish";
 
-const Number_of_Words =20;
-const Countdown_Seconds = 40;
+const Number_of_Words =40;
+const Countdown_Seconds = 60;
 const useEngine = () => {
   const [state, setState] = useState<State>("start");
   const { words, updateWords } = useWords(Number_of_Words);
