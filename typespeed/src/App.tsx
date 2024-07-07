@@ -4,7 +4,6 @@ import Results from "./components/Results";
 import UserTypings from "./components/UserTypings";
 import useEngine from "./hooks/useEngine";
 import { calculateAccuracyPercentage } from "./utilities/helpers";
-import { useState } from "react";
 import ParticleBg from "./components/ParticleBg";
 
 const words = faker.word.words(40);
@@ -15,7 +14,6 @@ const GeneratedWords = ({ words }: { words: string }) => {
 };
 
 const App = () => {
-  const [init, setInit] = useState(false);
   const { state, words, timeLeft, typed, errors, restart, totalTyped } =
     useEngine();
   return (
