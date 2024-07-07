@@ -3,39 +3,47 @@ import RestartButton from "./components/RestartButton";
 import Results from "./components/Results";
 import UserTypings from "./components/UserTypings";
 import useEngine from "./hooks/useEngine";
-import { time } from "console";
 import { calculateAccuracyPercentage } from "./utilities/helpers";
+import { useState } from "react";
+import ParticleBg from "./components/ParticleBg";
 
-const words = faker.random.words(40);
+const words = faker.word.words(40);
 console.log(words);
 
 const GeneratedWords = ({ words }: { words: string }) => {
   return <div className=" text-white">{words}</div>;
 };
 
-const App=()=> {
-  const {state ,words,timeLeft,typed,errors,restart,totalTyped} = useEngine();
+const App = () => {
+  const [init, setInit] = useState(false);
+  const { state, words, timeLeft, typed, errors, restart, totalTyped } =
+    useEngine();
   return (
     <>
       <CountDownTimer timeLeft={timeLeft} />
       <WordsContainer>
         <GeneratedWords words={words} />
-        <UserTypings className="absolute inset-0" words={words} userInput={typed} />
+        <UserTypings
+          className="absolute inset-0"
+          words={words}
+          userInput={typed}
+        />
       </WordsContainer>{" "}
       <RestartButton
         className={"mx-auto mt-10 text-slate-200"}
         onRestart={restart}
       />
       <Results
-      state={state}
+        state={state}
         errors={errors}
-        accuracyPercentage={calculateAccuracyPercentage(errors,totalTyped)}
+        accuracyPercentage={calculateAccuracyPercentage(errors, totalTyped)}
         className="mt-10"
         total={totalTyped}
       />
+      <ParticleBg/>
     </>
   );
-}
+};
 
 const WordsContainer = ({ children }: { children: React.ReactNode }) => {
   return (
