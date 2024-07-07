@@ -5,7 +5,7 @@ import UserTypings from "./components/UserTypings";
 import useEngine from "./hooks/useEngine";
 import { calculateAccuracyPercentage } from "./utilities/helpers";
 import ParticleBg from "./components/ParticleBg";
-
+import logo from "../src/logotrans.png";
 const words = faker.word.words(40);
 console.log(words);
 
@@ -18,6 +18,9 @@ const App = () => {
     useEngine();
   return (
     <>
+    <div className="w-[250px] h-[250px] items-center mx-auto">
+      <img src={logo}/>
+    </div>
       <CountDownTimer timeLeft={timeLeft} />
       <WordsContainer>
         <GeneratedWords words={words} />
@@ -45,7 +48,7 @@ const App = () => {
 
 const WordsContainer = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative text-3xl max-w-xl mt-3 leading-relaxed break-all">
+    <div className="relative text-3xl max-w-2xl mt-3 leading-relaxed break-all">
       {children}
     </div>
   );
